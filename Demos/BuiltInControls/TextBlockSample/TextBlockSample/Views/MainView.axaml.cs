@@ -5,34 +5,34 @@ namespace TextBlockSample.Views;
 
 public partial class MainView : UserControl
 {
-    public MainView()
+public MainView()
+{
+    InitializeComponent();
+
+    TestTextBlock.PointerPressed +=
+        TestTextBlock_PointerPressed;
+    //TestTextBlock.PointerReleased +=
+    //    TestTextBlock_PointerReleased;
+    //TestTextBlock.PointerEntered +=
+    //    TestTextBlock_PointerEntered;
+    //TestTextBlock.PointerMoved +=
+    //    TestTextBlock_PointerMoved;
+    //TestTextBlock.PointerExited +=
+    //    TestTextBlock_PointerExited;
+    //TestTextBlock.DoubleTapped +=
+    //    TestTextBlock_DoubleTapped;
+}
+
+private void TestTextBlock_PointerPressed
+(
+    object? sender,
+    PointerPressedEventArgs e)
+{
+    if (e.ClickCount == 3)
     {
-        InitializeComponent();
 
-        TestTextBlock.PointerPressed +=
-            TestTextBlock_PointerPressed;
-        //TestTextBlock.PointerReleased +=
-        //    TestTextBlock_PointerReleased;
-        //TestTextBlock.PointerEntered +=
-        //    TestTextBlock_PointerEntered;
-        //TestTextBlock.PointerMoved +=
-        //    TestTextBlock_PointerMoved;
-        //TestTextBlock.PointerExited +=
-        //    TestTextBlock_PointerExited;
-        //TestTextBlock.DoubleTapped +=
-        //    TestTextBlock_DoubleTapped;
     }
-
-    private void TestTextBlock_PointerPressed
-    (
-        object? sender,
-        PointerPressedEventArgs e)
-    {
-        if (e.ClickCount == 3)
-        {
-
-        }
-    }
+}
 
 
     private void TestTextBlock_PointerReleased
