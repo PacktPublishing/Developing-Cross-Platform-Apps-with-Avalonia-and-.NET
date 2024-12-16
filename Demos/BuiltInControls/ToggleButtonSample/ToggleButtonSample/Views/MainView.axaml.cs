@@ -18,7 +18,8 @@ public partial class MainView : UserControl
         object? sender, 
         RoutedEventArgs e)
     {
-        bool? toggleButtonState = TwoStateToggleTestButton.IsChecked;
+        bool? toggleButtonState = 
+            TwoStateToggleTestButton.IsChecked;
     }
 
 

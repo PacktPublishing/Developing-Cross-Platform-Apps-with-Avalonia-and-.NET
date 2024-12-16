@@ -14,7 +14,7 @@
 			<ToggleButton x:Name="TwoStateToggleTestButton"
 						  Grid.Row="1"
 						  Content="Toggle Test Button"
-						  HorizontalAlignment="Center"
+						  HorizontalAlignment="Left"
 						  VerticalAlignment="Center"/>
 		</Grid>
 		<Grid RowDefinitions="Auto,*"
@@ -25,23 +25,24 @@
 						  Grid.Row="1"
 						  IsThreeState="True"
 						  Content="Toggle Test Button"
-						  HorizontalAlignment="Center"
+						  HorizontalAlignment="Left"
 						  VerticalAlignment="Center"/>
 		</Grid>
 		<Grid RowDefinitions="Auto,*,*"
 			  Grid.Column="2">
-			<TextBlock Text="2-State Toggle Button with Binding:"
+			<TextBlock Text="Toggle Buttons with Binding:"
 					   HorizontalAlignment="Left"/>
-			<ToggleButton x:Name="BindingToggleTestButton1"
+			<ToggleButton x:Name="BindingToggleButton1"
 						  Grid.Row="1"
 						  Content="Toggle Test Binding Button1"
-						  HorizontalAlignment="Center"
+						  HorizontalAlignment="Left"
 						  VerticalAlignment="Center"/>
 			<ToggleButton x:Name="BindingToggleTestButton2"
 						  Grid.Row="2"
-						  IsChecked="{Binding #BindingToggleTestButton1.IsChecked, Mode=TwoWay}"
+						  IsChecked="{Binding #BindingToggleButton1.IsChecked, 
+											  Mode=TwoWay}"
 						  Content="Toggle Test Binding Button2"
-						  HorizontalAlignment="Center"
+						  HorizontalAlignment="Left"
 						  VerticalAlignment="Center"/>
 		</Grid>
 	</Grid>
