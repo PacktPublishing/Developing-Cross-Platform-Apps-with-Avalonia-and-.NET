@@ -1,5 +1,4 @@
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 
 namespace ToggleButtonSample.Views;
@@ -17,7 +16,7 @@ public partial class MainView : UserControl
     (
         object? sender, 
         RoutedEventArgs e)
-    {
+    {   
         bool? toggleButtonState = 
             TwoStateToggleTestButton.IsChecked;
     }
