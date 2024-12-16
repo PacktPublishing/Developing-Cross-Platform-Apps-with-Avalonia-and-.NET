@@ -6,9 +6,43 @@
              d:DesignWidth="800"
              d:DesignHeight="450"
              x:Class="ToggleButtonSample.Views.MainView">
-    <Button x:Name="TestButton"
-            Content="Test"
-            ClickMode="Press"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
+	<Grid ColumnDefinitions="*,*,*"
+		  Margin="10">
+		<Grid RowDefinitions="Auto,*">
+			<TextBlock Text="2-State Toggle Button:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="TwoStateToggleTestButton"
+						  Grid.Row="1"
+						  Content="Toggle Test Button"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+		</Grid>
+		<Grid RowDefinitions="Auto,*"
+			  Grid.Column="1">
+			<TextBlock Text="3-State Toggle Button:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="ThreeStateToggleTestButton"
+						  Grid.Row="1"
+						  IsThreeState="True"
+						  Content="Toggle Test Button"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+		</Grid>
+		<Grid RowDefinitions="Auto,*,*"
+			  Grid.Column="2">
+			<TextBlock Text="2-State Toggle Button with Binding:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="BindingToggleTestButton1"
+						  Grid.Row="1"
+						  Content="Toggle Test Binding Button1"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+			<ToggleButton x:Name="BindingToggleTestButton2"
+						  Grid.Row="2"
+						  IsChecked="{Binding #BindingToggleTestButton1.IsChecked, Mode=TwoWay}"
+						  Content="Toggle Test Binding Button2"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
 </UserControl>
