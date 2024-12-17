@@ -6,14 +6,29 @@
              d:DesignWidth="800"
              d:DesignHeight="450"
              x:Class="TextBoxSample.Views.MainView">
-	<TextBlock x:Name="TestTextBlock"
-			   Text="Hello World"
-			   HorizontalAlignment="Center"
-			   VerticalAlignment="Center"
-			   Background="Red"
-			   Foreground="Blue"
-			   TextDecorations="Underline"
-			   FontSize="30"
-			   FontWeight="Bold"
-			   FontFamily="Freestyle Script"/>
+	<Grid ColumnDefinitions="*,*"
+		  Margin="10">
+		<Grid RowDefinitions="Auto,*">
+			<TextBlock Text="Read/Write TextBox Test"
+					   HorizontalAlignment="Left"/>
+			<TextBox x:Name="TestTextBox"
+					 Text="Hello World"
+					 MinWidth="100"
+					 Grid.Row="1"
+					 HorizontalAlignment="Left"
+					 VerticalAlignment="Center"/>
+		</Grid>
+		<Grid RowDefinitions="Auto,*"
+			  Grid.Column="1">
+			<TextBlock Text="Read-Only TextBox Test"
+					   HorizontalAlignment="Left"/>
+			<TextBox x:Name="TestReadOnlyTextBox"
+					 Text="Hello World"
+					 IsReadOnly="True"
+					 MinWidth="100"
+					 Grid.Row="1"
+					 HorizontalAlignment="Left"
+					 VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
 </UserControl>

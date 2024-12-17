@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         d:DesignWidth="800"
         d:DesignHeight="450"
-        Width="400"
-        Height="250"
+        Width="380"
+        Height="150"
         x:Class="TextBoxSample.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="TextBoxSample">
