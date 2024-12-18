@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
+			 x:Class="FlyoutSample.Views.MainView">
+	<Grid ColumnDefinitions="*,*"
+		  RowDefinitions="*,*"
+		  ShowGridLines="True"
+		  Margin="10">
+		<Button x:Name="OpenFlyoutButton"
+				Content="Click to Open a Flyout"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Margin="10,0,0,0">
+			<Button.Flyout>
+				<Flyout Placement="BottomEdgeAlignedLeft">
+					<Grid Background="Red"
+						  Width="50"
+						  Height="100"/>
+				</Flyout>
+			</Button.Flyout>
+		</Button>
+
+		<TextBlock x:Name="OpenFlyoutText"
+				   Text="Left Mouse Click to Open a Flyout"
+				   HorizontalAlignment="Left"
+				   VerticalAlignment="Top"
+				   Background="Transparent"
+				   Grid.Row="1"
+				   Margin="10,10,0,0">
+			<TextBlock.ContextFlyout>
+				<Flyout Placement="BottomEdgeAlignedLeft">
+					<Grid Background="Red"
+						  Width="50"
+						  Height="100"/>
+				</Flyout>
+			</TextBlock.ContextFlyout>
+		</TextBlock>
+
+		<Button x:Name="OpenMenuFlyoutButton"
+				Content="Click to Open a Menu Flyout"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Grid.Column="1"
+			    Margin="10,0,0,0">
+			<Button.Flyout>
+				<MenuFlyout Placement="BottomEdgeAlignedLeft">
+					<MenuItem Header="Item 1"/>
+					<MenuItem Header="Item 2"/>
+					<MenuItem Header="Item 3"/>
+				</MenuFlyout>
+			</Button.Flyout>
+		</Button>
+
+		<TextBlock x:Name="OpenMenuFlyoutText"
+				   Text="Left Mouse Click to Open a Menu Flyout"
+				   HorizontalAlignment="Left"
+				   VerticalAlignment="Top"
+				   Background="Transparent"
+				   Grid.Row="1"
+				   Grid.Column="1"
+				   Margin="10,10,0,0">
+			<TextBlock.ContextFlyout>
+				<MenuFlyout Placement="BottomEdgeAlignedLeft">
+					<MenuItem Header="Item 1"/>
+					<MenuItem Header="Item 2"/>
+					<MenuItem Header="Item 3"/>
+				</MenuFlyout>
+			</TextBlock.ContextFlyout>
+		</TextBlock>
+	</Grid>
+</UserControl>
