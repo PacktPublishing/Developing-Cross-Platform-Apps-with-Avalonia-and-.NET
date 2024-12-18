@@ -2,9 +2,9 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using ButtonSample.Views;
+using PopupSample.Views;
 
-namespace ButtonSample;
+namespace PopupSample;
 
 public partial class App : Application
 {

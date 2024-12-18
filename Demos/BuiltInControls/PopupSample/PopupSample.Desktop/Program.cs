@@ -1,7 +1,7 @@
 ﻿using System;
 using Avalonia;
 
-namespace ButtonSample.Desktop;
+namespace PopupSample.Desktop;
 
 sealed class Program
 {

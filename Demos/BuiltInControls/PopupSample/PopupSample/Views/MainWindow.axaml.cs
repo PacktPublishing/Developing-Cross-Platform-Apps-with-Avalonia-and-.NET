@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ButtonSample.Views;
+namespace PopupSample.Views;
 
 public partial class MainWindow : Window
 {

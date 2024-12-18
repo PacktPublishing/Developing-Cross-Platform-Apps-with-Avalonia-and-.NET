@@ -1,8 +1,5 @@
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
-using Avalonia.Interactivity;
-
-namespace ButtonSample.Views;
+namespace PopupSample.Views;
 
 public partial class MainView : UserControl
 {

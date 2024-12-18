@@ -5,7 +5,7 @@
 			 mc:Ignorable="d"
 			 d:DesignWidth="800"
 			 d:DesignHeight="450"
-			 x:Class="ButtonSample.Views.MainView">
+			 x:Class="PopupSample.Views.MainView">
 	<Grid HorizontalAlignment="Center"
 		  VerticalAlignment="Center">
 		<CheckBox x:Name="PopupControllingCheckbox"
