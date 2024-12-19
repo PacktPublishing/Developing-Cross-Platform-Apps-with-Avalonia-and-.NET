@@ -25,10 +25,10 @@
 		</Button>
 
 		<TextBlock x:Name="OpenFlyoutText"
-				   Text="Left Mouse Click to Open a Flyout"
+				   Text="Right Mouse Click to Open a Flyout"
+				   Background="Yellow"
 				   HorizontalAlignment="Left"
 				   VerticalAlignment="Top"
-				   Background="Transparent"
 				   Grid.Row="1"
 				   Margin="10,10,0,0">
 			<TextBlock.ContextFlyout>
@@ -56,10 +56,10 @@
 		</Button>
 
 		<TextBlock x:Name="OpenMenuFlyoutText"
-				   Text="Left Mouse Click to Open a Menu Flyout"
+				   Text="Right Mouse Click to Open a Menu Flyout"
+				   Background="Yellow"
 				   HorizontalAlignment="Left"
 				   VerticalAlignment="Top"
-				   Background="Transparent"
 				   Grid.Row="1"
 				   Grid.Column="1"
 				   Margin="10,10,0,0">
