@@ -10,7 +10,7 @@
 			  VerticalAlignment="Center"
 			  SelectedIndex="0">
 		<ComboBoxItem Content="Item 1"/>
-		<ComboBoxItem Content="Item 2"/>
-		<ComboBoxItem Content="Item 3"/>
+		<ComboBoxItem Content="Another Item 2"/>
+		<ComboBoxItem Content="And yet Another Item 3"/>
 	</ComboBox>
 </UserControl>
