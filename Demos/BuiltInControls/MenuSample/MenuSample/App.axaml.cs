@@ -2,9 +2,9 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using ToolTipSample.Views;
+using MenuSample.Views;
 
-namespace ToolTipSample;
+namespace MenuSample;
 
 public partial class App : Application
 {

@@ -2,7 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 
-namespace ToolTipSample.Views;
+namespace MenuSample.Views;
 
 public partial class MainView : UserControl
 {

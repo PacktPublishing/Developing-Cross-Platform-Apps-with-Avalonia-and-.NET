@@ -1,7 +1,7 @@
 ﻿using System;
 using Avalonia;
 
-namespace ToolTipSample.Desktop;
+namespace MenuSample.Desktop;
 
 sealed class Program
 {

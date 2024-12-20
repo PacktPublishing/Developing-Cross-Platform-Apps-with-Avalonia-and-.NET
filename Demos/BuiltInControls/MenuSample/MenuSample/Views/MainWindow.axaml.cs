@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ToolTipSample.Views;
+namespace MenuSample.Views;
 
 public partial class MainWindow : Window
 {

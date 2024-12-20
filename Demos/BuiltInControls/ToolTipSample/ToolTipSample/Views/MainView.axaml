@@ -5,7 +5,7 @@
 			 mc:Ignorable="d"
 			 d:DesignWidth="800"
 			 d:DesignHeight="450"
-			 x:Class="ComboBoxSample.Views.MainView">
+			 x:Class="ToolTipSample.Views.MainView">
 	<Grid Margin="10"
 		  RowDefinitions="*,*">
 		<TextBlock Text="Hover the mouse pointer over the text to see a ToolTip"
