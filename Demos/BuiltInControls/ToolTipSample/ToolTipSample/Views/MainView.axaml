@@ -7,7 +7,7 @@
 			 d:DesignHeight="450"
 			 x:Class="ComboBoxSample.Views.MainView">
 	<Grid Margin="10"
-		  RowDefinitions="*,*,*">
+		  RowDefinitions="*,*">
 		<TextBlock Text="Hover the mouse pointer over the text to see a ToolTip"
 				   TextWrapping="WrapWithOverflow"
 				   Background="Yellow"
@@ -15,21 +15,21 @@
 				   VerticalAlignment="Center"
 				   ToolTip.Tip="This is a Text"/>
 
-		<TextBlock Text="Hover the mouse pointer over the text to see a ToolTip Containing a Button"
-				   Grid.Row="1"
-				   TextWrapping="WrapWithOverflow"
-				   Background="Yellow"
-				   HorizontalAlignment="Center"
-				   VerticalAlignment="Top">
-			<ToolTip.Tip>
-				<Button Content="This is a Button"/>
-			</ToolTip.Tip>
-		</TextBlock>
 
-		<Button Content="This Button Shows a ToolTip"
+		<Button Content="This Button Shows a Compound ToolTip"
 				Grid.Row="2"
 				HorizontalAlignment="Center"
-				VerticalAlignment="Top"
-				ToolTip.Tip="This is a Text"/>
+				VerticalAlignment="Center">
+			<ToolTip.Tip>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Text Followed by an Image: "
+							   VerticalAlignment="Center"/>
+					<Image Source="avares://ToolTipSample/Assets/avalonia-logo.ico"
+						   Stretch="Uniform"
+						   Width="30"
+						   VerticalAlignment="Center"/>
+				</StackPanel>
+			</ToolTip.Tip>
+		</Button>
 	</Grid>
 </UserControl>
