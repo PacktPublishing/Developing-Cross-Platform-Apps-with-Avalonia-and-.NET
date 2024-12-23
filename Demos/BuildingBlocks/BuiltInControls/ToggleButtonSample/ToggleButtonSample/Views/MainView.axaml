@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="ToggleButtonSample.Views.MainView">
+	<Grid ColumnDefinitions="*,*,*"
+		  Margin="10">
+		<Grid RowDefinitions="Auto,*">
+			<TextBlock Text="2-State Toggle Button:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="TwoStateToggleTestButton"
+						  Grid.Row="1"
+						  Content="Toggle Test Button"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"/>
+		</Grid>
+		<Grid RowDefinitions="Auto,*"
+			  Grid.Column="1">
+			<TextBlock Text="3-State Toggle Button:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="ThreeStateToggleTestButton"
+						  Grid.Row="1"
+						  IsThreeState="True"
+						  Content="Toggle Test Button"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"/>
+		</Grid>
+		<Grid RowDefinitions="Auto,*,*"
+			  Grid.Column="2">
+			<TextBlock Text="Toggle Buttons with Binding:"
+					   HorizontalAlignment="Left"/>
+			<ToggleButton x:Name="BindingToggleButton1"
+						  Grid.Row="1"
+						  Content="Toggle Test Binding Button1"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"/>
+			<ToggleButton x:Name="BindingToggleTestButton2"
+						  Grid.Row="2"
+						  IsChecked="{Binding #BindingToggleButton1.IsChecked, 
+											  Mode=TwoWay}"
+						  Content="Toggle Test Binding Button2"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
+</UserControl>

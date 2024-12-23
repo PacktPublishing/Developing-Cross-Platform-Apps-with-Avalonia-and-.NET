@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d"
+			 d:DesignWidth="800"
+			 d:DesignHeight="450"
+			 x:Class="ComboBoxSample.Views.MainView">
+	<ComboBox HorizontalAlignment="Center"
+			  VerticalAlignment="Center"
+			  SelectedIndex="0">
+		<ComboBoxItem Content="Item 1"/>
+		<ComboBoxItem Content="Another Item 2"/>
+		<ComboBoxItem Content="And yet Another Item 3"/>
+	</ComboBox>
+</UserControl>

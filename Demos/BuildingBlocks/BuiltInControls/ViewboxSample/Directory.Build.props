@@ -1,0 +1,7 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<AvaloniaVersion>11.2.2</AvaloniaVersion>
+	</PropertyGroup>
+</Project>
