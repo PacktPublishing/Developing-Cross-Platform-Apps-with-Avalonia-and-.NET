@@ -73,7 +73,7 @@
 				  Fill="Red">
 				<Path.Data>
 					<PathGeometry>
-						<PathFigure StartPoint="0,0"
+						<PathFigure StartPoint="100,100"
 									IsClosed="True">
 							<LineSegment Point="50,0"/>
 							<LineSegment Point="100,50"/>
