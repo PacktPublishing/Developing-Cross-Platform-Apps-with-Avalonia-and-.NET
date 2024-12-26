@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="StretchSample.Views.MainView">
+
+	<Grid>
+		<Button Content="Top Left"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Background="Pink"/>
+		<Button Content="Top Right"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Background="Pink"/>
+		<Button Content="Bottom Left"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Bottom"
+				Background="Pink"/>
+		<Button Content="Bottom Right"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Bottom"
+				Background="Pink"/>
+	</Grid>
+</UserControl>
