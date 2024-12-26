@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="StretchSample.Views.MainView">
+
+	<Grid>
+		<Button Content="Stretch with Margin 200,100,50,25"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Margin="200,100,50,25"
+				MinWidth="150"
+				MaxWidth="300"
+				Background="Pink"/>
+	</Grid>
+</UserControl>
