@@ -1,0 +1,78 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="WrapPanelSample.Views.MainView">
+	<UserControl.Styles>
+		<Style Selector="Control">
+			<Setter Property="HorizontalAlignment"
+					Value="Left"/>
+			<Setter Property="VerticalAlignment"
+					Value="Top"/>
+			<Setter Property="Margin"
+					Value="0,5"/>
+		</Style>
+	</UserControl.Styles>
+	<Grid ColumnDefinitions="*,*"
+		  HorizontalAlignment="Stretch"
+		  VerticalAlignment="Stretch"
+		  ShowGridLines="True"
+		  Margin="10">
+		<Grid RowDefinitions="Auto, *">
+			<TextBlock HorizontalAlignment="Left"
+					   VerticalAlignment="Center"
+					   Margin="0"
+					   Text="Vertical WrapPanel:"
+					   FontWeight="Bold"/>
+			<WrapPanel Grid.Row="1" 
+					   Orientation="Vertical">
+				<CheckBox Content="CheckBox"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"
+						  Margin="5"/>
+				<Button Content="Button"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						Margin="5"/>
+				<TextBlock Text="TextBlock1"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="5"/>
+				<TextBlock Text="TextBlock2"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="5"/>
+				<TextBlock Text="TextBlock3"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="5"/>
+				<TextBlock Text="TextBlock4"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="5"/>
+			</WrapPanel>
+		</Grid>
+		<Grid RowDefinitions="Auto, *"
+			  Grid.Column="1"
+			  Margin="10,0">
+			<TextBlock HorizontalAlignment="Left"
+					   VerticalAlignment="Center"
+					   Margin="0"
+					   Text="Horizontal WrapPanel:"
+					   FontWeight="Bold"/>
+			<WrapPanel Grid.Row="1"
+					   Orientation="Horizontal">
+				<CheckBox Content="CheckBox"
+						  HorizontalAlignment="Left"
+						  VerticalAlignment="Center"
+						  Margin="5,0"/>
+				<Button Content="Button"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						Margin="5,0"/>
+				<TextBlock Text="TextBlock"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="5,0"/>
+			</WrapPanel>
+		</Grid>
+	</Grid>
+</UserControl>
