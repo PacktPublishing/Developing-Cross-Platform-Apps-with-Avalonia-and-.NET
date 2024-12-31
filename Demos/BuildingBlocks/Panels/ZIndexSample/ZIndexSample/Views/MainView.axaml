@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="ZIndexSample.Views.MainView">
+	<Grid>
+		<Button Content="ZIndex=10, 1st Btn"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Top"
+				Width="150"
+				Height="50"
+				Background="LightBlue"
+				ZIndex="10"/>
+		<Button Content="ZIndex=0, 2nd Btn"
+			    HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="160"
+				Height="150"
+				Background="Pink"/>
+		<Button Content="ZIndex=0, 3rd Btn"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Width="160"
+				Height="200"
+				Background="LightGreen"/>
+	</Grid>
+</UserControl>
