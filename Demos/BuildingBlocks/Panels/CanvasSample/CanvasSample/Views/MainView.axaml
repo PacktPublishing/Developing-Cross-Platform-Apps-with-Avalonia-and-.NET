@@ -1,26 +1,15 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="CanvasSample.Views.MainView">
-	<DockPanel>
-		<Button Content="Right"
-				Background="Pink"
-				DockPanel.Dock="Right"/>
-		<Button Content="Left"
-				Background="LightBlue"
-				DockPanel.Dock="Left"/>
-		<Button Content="Top"
-				Background="Yellow"
-				DockPanel.Dock="Top"/>
-		<Button Content="Bottom"
-				Background="LightGreen"
-				DockPanel.Dock="Bottom"/>
-		<Button Content="Another Left"
-				Background="LightBlue"
-				DockPanel.Dock="Left"/>
-		<Button Content="Another Top"
-				Background="Yellow"
-				DockPanel.Dock="Top"/>
-		<Button Content="Left Over"
-				Background="LightGray"/>
-	</DockPanel>
+	<Canvas HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch">
+		<Button Content="Left:20; Top:30"
+				Canvas.Left="20"
+				Canvas.Top="30"
+				Background="LightBlue"/>
+		<Button Content="Left:50; Top:80"
+				Canvas.Left="50"
+				Canvas.Top="80"
+				Background="Pink"/>
+	</Canvas>
 </UserControl>
