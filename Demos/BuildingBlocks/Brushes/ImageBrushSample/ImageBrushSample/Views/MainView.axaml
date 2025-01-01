@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="ImageBrushSample.Views.MainView">
+	<Grid ColumnDefinitions="*,*"
+		  ShowGridLines="True">
+		<Grid RowDefinitions="Auto, *">
+			<TextBlock Text="ImageBrush, No Tiling:"
+					   Margin="10,5"
+					   FontSize="22"
+					   FontWeight="Bold"/>
+			<Ellipse HorizontalAlignment="Stretch"
+					 VerticalAlignment="Stretch"
+					 Grid.Row="1"
+					 Margin="10"
+					 Stroke="Black"
+					 StrokeThickness="2">
+				<Ellipse.Fill>
+					<ImageBrush Source="/Assets/avalonia-logo.ico"
+								Stretch="Fill"/>
+				</Ellipse.Fill>
+			</Ellipse>
+		</Grid>
+
+		<Grid RowDefinitions="Auto, *"
+			  Grid.Column="1">
+			<TextBlock Text="ImageBrush, Tiling:"
+					   FontSize="22"
+					   FontWeight="Bold"
+					   Margin="10,5"/>
+			<Ellipse x:Name="TheEllipse"
+					 HorizontalAlignment="Stretch"
+					 VerticalAlignment="Stretch"
+					 Grid.Row="1"
+					 Margin="10"
+					 Stroke="Black"
+					 StrokeThickness="2">
+				<Ellipse.Fill>
+					<ImageBrush Source="/Assets/avalonia-logo.ico"
+								Stretch="Fill"
+								DestinationRect="0,0,100,100" 
+								TileMode="Tile"/>
+				</Ellipse.Fill>
+			</Ellipse>
+		</Grid>
+	</Grid>
+</UserControl>
