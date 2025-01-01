@@ -1,0 +1,94 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="SimpleBrushesSample.Views.MainView">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="Margin"
+					Value="10"/>
+		</Style>
+	</UserControl.Styles>
+	<Grid RowDefinitions="*,*"
+		  ColumnDefinitions="*,*"
+		  ShowGridLines="True">
+		<Button Content="SolidColorBrush (Pink)">
+			<Button.Background>
+				<SolidColorBrush Color="Pink"/>
+			</Button.Background>
+		</Button>
+		<Button Content="LinearGradientBrush"
+				Grid.Column="1">
+			<Button.Background>
+				<LinearGradientBrush StartPoint="0%,0%"
+									 EndPoint="0%,100%">
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Offset="0"
+									  Color="Red"/>
+						<GradientStop Offset="0.5"
+									  Color="Blue"/>
+						<GradientStop Offset="1"
+									  Color="Green"/>
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+
+		<Button Content="LinearGradientBrush"
+				Grid.Column="1">
+			<Button.Background>
+				<LinearGradientBrush StartPoint="0%,0%"
+									 EndPoint="0%,100%">
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Offset="0"
+									  Color="Pink"/>
+						<GradientStop Offset="0.5"
+									  Color="LightBlue"/>
+						<GradientStop Offset="1"
+									  Color="LightGreen"/>
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+
+
+		<Button Content="RadialGradientBrush"
+				Grid.Row="1">
+			<Button.Background>
+				<RadialGradientBrush GradientOrigin="75%,75%"
+									 Center="25%,25%"
+									 Radius="0.8">
+					<RadialGradientBrush.GradientStops>
+						<GradientStop Offset="0"
+									  Color="Pink"/>
+						<GradientStop Offset="0.5"
+									  Color="LightBlue"/>
+						<GradientStop Offset="1"
+									  Color="LightGreen"/>
+					</RadialGradientBrush.GradientStops>
+				</RadialGradientBrush>
+			</Button.Background>
+		</Button>
+
+		<Button Content="ConicGradientBrush"
+				Grid.Row="1"
+				Grid.Column="1">
+			<Button.Background>
+				<ConicGradientBrush Center="25%,25%"
+									Angle="90">
+					<ConicGradientBrush.GradientStops>
+						<GradientStop Offset="0"
+									  Color="Pink"/>
+						<GradientStop Offset="0.5"
+									  Color="LightBlue"/>
+						<GradientStop Offset="1"
+									  Color="LightGreen"/>
+					</ConicGradientBrush.GradientStops>
+				</ConicGradientBrush>
+			</Button.Background>
+		</Button>
+	</Grid>
+</UserControl>
