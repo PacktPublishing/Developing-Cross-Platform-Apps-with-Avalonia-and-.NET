@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="TranslateTransformSample.Views.MainView">
+	<Grid Margin="10"
+		  ColumnDefinitions="*,*"
+		  ShowGridLines="True">
+		<StackPanel HorizontalAlignment="Left">
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,10">
+				<TextBlock Text="{Binding #XSlider.Value, StringFormat='X=\{0:0.00\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="16"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				
+				<Slider x:Name="XSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-100"
+						Maximum="100"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,10">
+				<TextBlock Text="{Binding #YSlider.Value, StringFormat='Y=\{0:0.00\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="16"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="YSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-100"
+						Maximum="100"
+						HorizontalAlignment="Left"/>
+			</Grid>
+		</StackPanel>
+		
+		<Grid Grid.Column="1">
+			<TextBlock HorizontalAlignment="Center"
+					   VerticalAlignment="Center"
+					   FontSize="12"
+					   FontWeight="Bold"
+					   Width="80"
+					   Height="80"
+					   Background="Pink"
+					   Padding="15,25,0,0">
+				<Run Text="{Binding #XSlider.Value, StringFormat='X=\{0:0.00\}'}" />
+				<Run Text="&#10;"/>
+				<Run Text="{Binding #YSlider.Value, StringFormat='Y=\{0:0.00\}'}"/>
+
+				<TextBlock.RenderTransform>
+					<TranslateTransform X="{Binding #XSlider.Value}"
+										Y="{Binding #YSlider.Value}"/>
+				</TextBlock.RenderTransform>
+			</TextBlock>
+		</Grid>
+	</Grid>
+</UserControl>
