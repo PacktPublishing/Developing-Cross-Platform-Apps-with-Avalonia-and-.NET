@@ -1,0 +1,66 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="VisualBrushSample.Views.MainView">
+	<Grid ColumnDefinitions="*,*,*"
+		  ShowGridLines="True">
+		<Grid RowDefinitions="Auto, *">
+			<TextBlock Text="Original Control To Paint:"
+					   Margin="10,5"
+					   FontSize="14"
+					   FontWeight="Bold"/>
+			<Grid Grid.Row="1"
+				  Margin="10">
+				<Grid x:Name="ControlToPaint"
+					  Background="Pink">
+					<Ellipse Fill="Yellow"
+							 Stroke="Black"
+							 StrokeThickness="2"/>
+					<StackPanel HorizontalAlignment="Center"
+								VerticalAlignment="Center">
+						<TextBlock Text="Just Some Text"
+								   FontSize="16"
+								   HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid RowDefinitions="Auto, *"
+			  Grid.Column="1">
+			<TextBlock Text="VisualBrush, No Tiling:"
+					   Margin="10,5"
+					   FontSize="14"
+					   FontWeight="Bold"/>
+			<Grid Grid.Row="1">
+				<Grid Margin="10">
+					<Grid.Background>
+						<VisualBrush Visual="{Binding #ControlToPaint}" 
+									 Stretch="Fill"/>
+					</Grid.Background>
+				</Grid>
+			</Grid>
+		</Grid>
+
+		<Grid RowDefinitions="Auto, *"
+			  Grid.Column="2">
+			<TextBlock Text="VisualBrush, Tiling:"
+					   FontSize="14"
+					   FontWeight="Bold"
+					   Margin="10,5"/>
+			<Grid Grid.Row="1">
+				<Grid Margin="10">
+					<Grid.Background>
+						<VisualBrush Visual="{Binding #ControlToPaint}"
+									 Stretch="Fill"
+									 DestinationRect="0,0,100,100"
+									 TileMode="Tile"/>
+					</Grid.Background>
+				</Grid>
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>
