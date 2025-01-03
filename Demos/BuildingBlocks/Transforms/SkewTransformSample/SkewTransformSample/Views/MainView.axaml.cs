@@ -1,7 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace ScaleTransformSample.Views;
+namespace SkewTransformSample.Views;
 
 public partial class MainView : UserControl
 {

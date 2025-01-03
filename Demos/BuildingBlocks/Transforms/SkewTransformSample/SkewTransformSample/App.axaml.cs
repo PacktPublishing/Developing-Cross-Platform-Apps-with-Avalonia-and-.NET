@@ -2,9 +2,9 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using ScaleTransformSample.Views;
+using SkewTransformSample.Views;
 
-namespace ScaleTransformSample;
+namespace SkewTransformSample;
 
 public partial class App : Application
 {

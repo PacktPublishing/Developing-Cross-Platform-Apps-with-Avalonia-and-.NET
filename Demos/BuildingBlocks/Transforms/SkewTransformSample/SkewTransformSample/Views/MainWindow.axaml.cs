@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ScaleTransformSample.Views;
+namespace SkewTransformSample.Views;
 
 public partial class MainWindow : Window
 {
