@@ -1,0 +1,143 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="Rotate3DTransformSample.Views.MainView">
+	<Grid Margin="10"
+		  ColumnDefinitions="*,*"
+		  ShowGridLines="True">
+		<StackPanel HorizontalAlignment="Left">			
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #DepthSlider.Value, StringFormat='Depth=\{0:0\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="DepthSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="100"
+						Maximum="300"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #CenterXSlider.Value, StringFormat='CenterX=\{0:0\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="CenterXSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-100"
+						Maximum="100"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #CenterYSlider.Value, StringFormat='CenterY=\{0:0\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="CenterYSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-100"
+						Maximum="100"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #CenterZSlider.Value, StringFormat='CenterZ=\{0:0\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="CenterZSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-100"
+						Maximum="100"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #AngleXSlider.Value, StringFormat='AngleX=\{0:0°\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="AngleXSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-180"
+						Maximum="180"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #AngleYSlider.Value, StringFormat='AngleY=\{0:0°\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="AngleYSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-180"
+						Maximum="180"
+						HorizontalAlignment="Left"/>
+			</Grid>
+			<Grid RowDefinitions="Auto,Auto"
+				  Margin="0,5">
+				<TextBlock Text="{Binding #AngleZSlider.Value, StringFormat='AngleZ=\{0:0°\}'}"
+						   HorizontalAlignment="Left"
+						   FontSize="12"
+						   FontWeight="Bold"
+						   Margin="5,0,0,0"/>
+				<Slider x:Name="AngleZSlider"
+						Grid.Row="1"
+						Width="200"
+						Minimum="-180"
+						Maximum="180"
+						HorizontalAlignment="Left"/>
+			</Grid>
+		</StackPanel>
+		
+		<Grid Grid.Column="1">
+			<Border Width="120"
+					Height="100"
+					Background="Pink"
+					BorderBrush="Black"
+					BorderThickness="2">
+				<Border.RenderTransform>
+					<Rotate3DTransform Depth="{Binding #DepthSlider.Value}"
+									   CenterX="{Binding #CenterXSlider.Value}"
+									   CenterY="{Binding #CenterYSlider.Value}"
+									   CenterZ="{Binding #CenterZSlider.Value}"
+									   AngleX="{Binding #AngleXSlider.Value}"
+									   AngleY="{Binding #AngleYSlider.Value}"
+									   AngleZ="{Binding #AngleZSlider.Value}" />
+				</Border.RenderTransform>
+				<TextBlock 
+					   Text="Hello World!"
+					   FontSize="16"
+					   FontWeight="Bold"
+			  		   HorizontalAlignment="Center"
+			  		   VerticalAlignment="Center"/>
+			</Border>
+			<Rectangle Width="120"
+					   Height="100"
+					   Stroke="Black"
+					   StrokeThickness="2"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
+</UserControl>
