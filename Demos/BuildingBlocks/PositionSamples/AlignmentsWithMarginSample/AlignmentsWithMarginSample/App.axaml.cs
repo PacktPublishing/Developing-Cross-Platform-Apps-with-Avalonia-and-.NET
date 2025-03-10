@@ -3,9 +3,9 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using StretchSample.Views;
+using AlignmentsWithMarginSample.Views;
 
-namespace StretchSample;
+namespace AlignmentsWithMarginSample;
 
 public partial class App : Application
 {

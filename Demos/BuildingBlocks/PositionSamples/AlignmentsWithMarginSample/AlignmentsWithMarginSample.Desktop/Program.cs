@@ -1,7 +1,7 @@
 ﻿using System;
 using Avalonia;
 
-namespace StretchSample.Desktop;
+namespace AlignmentsWithMarginSample.Desktop;
 
 sealed class Program
 {

@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace StretchSample.Views;
+namespace AlignmentsWithMarginSample.Views;
 
 public partial class MainWindow : Window
 {

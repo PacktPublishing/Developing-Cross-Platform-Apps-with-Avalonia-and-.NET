@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace StretchSample.Views;
+namespace AlignmentsWithMarginSample.Views;
 
 public partial class MainView : UserControl
 {
