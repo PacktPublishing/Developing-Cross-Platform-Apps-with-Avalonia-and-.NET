@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="VisualTreeCalculusSample.Views.MainView">
+	<Grid ColumnDefinitions="Auto, Auto *">
+		<ToggleSwitch x:Name="TheToggleSwitch"
+					  HorizontalAlignment="Left"
+					  VerticalAlignment="Center"
+					  Margin="10,0"/>
+		<Grid Width="2"
+			  Grid.Column="1"
+			  VerticalAlignment="Stretch"
+			  Background="Black"/>
+		<Grid Grid.Column="2"
+			  RowDefinitions="Auto, Auto, Auto, Auto"
+			  ColumnDefinitions="Auto, *"
+			  ShowGridLines="True"
+			  Margin="10,0,0,0">
+				<Button x:Name="GetVisualParentButton"
+						Content="GetVisualParent()"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"
+						Margin="0,10,10,10"/>
+				<TextBlock x:Name="VisualParentTextBlock"
+						   Grid.Column="1"
+						   Margin="10,10,0,10"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"/>
+
+			<Button x:Name="GetVisualAncestorsButton"
+					Grid.Row="1"
+					Content="GetVisualAncestors()"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Margin="0,10,10,10"/>
+			<ListBox x:Name="AncestorsListBox"
+					 Grid.Row="1"
+					 Grid.Column="1"
+					 Margin="10"
+					 MaxHeight="170"
+					 HorizontalAlignment="Stretch"
+					 VerticalAlignment="Center"/>
+
+			<Button x:Name="GetVisualChildrenButton"
+					Grid.Row="2"
+					Content="GetVisualChildren()"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Margin="0,10,10,10"/>
+			<ListBox x:Name="ChildrenListBox"
+					 Grid.Row="2"
+					 Grid.Column="1"
+					 Margin="10"
+					 MaxHeight="170"
+					 HorizontalAlignment="Stretch"
+					 VerticalAlignment="Center"/>
+
+			<Button x:Name="GetVisualDescendantsButton"
+					Grid.Row="3"
+					Content="GetVisualDescendants()"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Margin="0,10,10,10"/>
+			<ListBox x:Name="DescendantsListBox"
+					 Grid.Row="3"
+					 Grid.Column="1"
+					 Margin="10"
+					 MaxHeight="370"
+					 HorizontalAlignment="Stretch"
+					 VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
+</UserControl>
