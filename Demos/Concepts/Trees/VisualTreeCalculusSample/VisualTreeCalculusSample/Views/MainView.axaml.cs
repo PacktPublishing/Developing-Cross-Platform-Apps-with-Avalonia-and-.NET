@@ -31,7 +31,10 @@ public partial class MainView : UserControl
     }
 
 
-    private void GetVisualAncestorsButton_Click(object? sender, RoutedEventArgs e)
+    private void GetVisualAncestorsButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         AncestorsListBox.ItemsSource = 
             TheToggleSwitch
@@ -40,16 +43,22 @@ public partial class MainView : UserControl
                 .ToArray();
     }
 
-    private void GetVisualChildrenButton_Click(object? sender, RoutedEventArgs e)
+    private void GetVisualChildrenButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         ChildrenListBox.ItemsSource =
             TheToggleSwitch
-                .GetVisualChildren ()
+                .GetVisualChildren()
                 .Select(l => l.GetDisplayStr())
                 .ToArray();
     }
 
-    private void GetVisualDescendantsButton_Click(object? sender, RoutedEventArgs e)
+    private void GetVisualDescendantsButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         DescendantsListBox.ItemsSource =
             TheToggleSwitch
@@ -62,11 +71,12 @@ public partial class MainView : UserControl
 
 public static class ControlStringHelper
 {
-    public static string GetDisplayStr(this Visual VisualElement)
+    public static string GetDisplayStr(this Visual visualElement)
     {
-        StyledElement? element = VisualElement as StyledElement;
-        string elementName = element?.Name == null ? string.Empty : $": {element.Name}";
+        string elementName =
+            visualElement?.Name == null 
+                ? string.Empty : $": {visualElement.Name}";
 
-        return $"{VisualElement.GetType().Name}{elementName}";
+        return $"{visualElement.GetType().Name}{elementName}";
     }
 }
