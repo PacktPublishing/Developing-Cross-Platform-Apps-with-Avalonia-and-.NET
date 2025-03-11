@@ -12,13 +12,17 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
 
-        GetLogicalParentButton.Click += GetLogicalParentButton_Click;
+        GetLogicalParentButton.Click += 
+            GetLogicalParentButton_Click;
 
-        GetLogicalAncestorsButton.Click += GetLogicalAncestorsButton_Click;
+        GetLogicalAncestorsButton.Click += 
+            GetLogicalAncestorsButton_Click;
 
-        GetLogicalChildrenButton.Click += GetLogicalChildrenButton_Click;
+        GetLogicalChildrenButton.Click += 
+            GetLogicalChildrenButton_Click;
 
-        GetLogicalDescendantsButton.Click += GetLogicalDescendantsButton_Click;
+        GetLogicalDescendantsButton.Click += 
+            GetLogicalDescendantsButton_Click;
     }
 
     private void GetLogicalParentButton_Click
@@ -27,46 +31,44 @@ public partial class MainView : UserControl
         RoutedEventArgs e)
     {
         LogicalParentTextBlock.Text =
-            TheToggleSwitch.GetLogicalParent()?.GetDisplayStr();
+            TheToggleSwitch.GetLogicalParent()?.GetType().Name;
     }
 
 
-    private void GetLogicalAncestorsButton_Click(object? sender, RoutedEventArgs e)
+    private void GetLogicalAncestorsButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         AncestorsListBox.ItemsSource = 
             TheToggleSwitch
                 .GetLogicalAncestors()
-                .Select(l =>  l.GetDisplayStr())
+                .Select(l =>  l.GetType().Name)
                 .ToArray();
     }
 
-    private void GetLogicalChildrenButton_Click(object? sender, RoutedEventArgs e)
+    private void GetLogicalChildrenButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         ChildrenListBox.ItemsSource =
             TheToggleSwitch
                 .GetLogicalChildren ()
-                .Select(l => l.GetDisplayStr())
+                .Select(l => l.GetType().Name)
                 .ToArray();
     }
 
-    private void GetLogicalDescendantsButton_Click(object? sender, RoutedEventArgs e)
+    private void GetLogicalDescendantsButton_Click
+    (
+        object? sender, 
+        RoutedEventArgs e)
     {
         DescendantsListBox.ItemsSource =
             TheToggleSwitch
                 .GetLogicalDescendants()
-                .Select(l => l.GetDisplayStr())
+                .Select(l => l.GetType().Name)
                 .ToArray();
     }
 
-}
-
-public static class ControlStringHelper
-{
-    public static string GetDisplayStr(this ILogical logicalElement)
-    {
-        StyledElement? element = logicalElement as StyledElement;
-        string elementName = element?.Name == null ? string.Empty : $": {element.Name}";
-
-        return $"{logicalElement.GetType().Name}{elementName}";
-    }
 }
