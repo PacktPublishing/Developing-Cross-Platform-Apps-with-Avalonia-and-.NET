@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="TheMainView"
+             x:Class="SimpleAttachedPropSample.Views.MainView"
+             xmlns:views="using:SimpleAttachedPropSample.Views">
+    <Grid x:Name="RootPanel"
+          Margin="20"
+          views:AttachedProps.GreetingText="RootPanel Greetings!">
+        <TextBlock
+            x:Name="GreetingTextFromGrid"
+            FontSize="24"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding Path=(views:AttachedProps.GreetingText),
+                           ElementName=RootPanel}"/>
+    </Grid>
+</UserControl>

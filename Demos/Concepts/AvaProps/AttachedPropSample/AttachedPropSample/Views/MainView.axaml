@@ -1,27 +1,32 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="TheMainView"
              x:Class="AttachedPropSample.Views.MainView"
-			 xmlns:views="using:AttachedPropSample.Views">
-	<Grid x:Name="RootPanel"
-		  Margin="20"
-		  RowDefinitions="*,*,*,Auto"
-		  views:AttachedProps.GreetingText="Greetings from the RootPanel">
-		<TextBlock x:Name="MainViewGreetingText"
-				   FontSize="24"
-				   HorizontalAlignment="Center"
-				   VerticalAlignment="Center"
-				   Text="{Binding $parent[views:MainView].(views:AttachedProps.GreetingText)}"/>
-		<TextBlock x:Name="GreetingTextFromGrid"
-				   FontSize="24"
-				   Grid.Row="1"
-				   HorizontalAlignment="Center"
-				   VerticalAlignment="Center"
-				   Text="{Binding $parent[Grid].(views:AttachedProps.GreetingText)}"/>
-		<Button x:Name="ChangeGreetingTextOnMainViewButton"
-				Grid.Row="3"
-				Margin="0,10"
-				Content="Change GreetingText on MainView"
-				HorizontalAlignment="Right"
-				VerticalAlignment="Center"/>
-	</Grid>
+             xmlns:views="using:AttachedPropSample.Views">
+    <Grid x:Name="RootPanel"
+          Margin="20"
+          RowDefinitions="*,*,*,Auto"
+          views:AttachedProps.GreetingText="RootPanel Greetings!">
+        <TextBlock
+            x:Name="GreetingTextFromGrid"
+            FontSize="24"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding Path=(views:AttachedProps.GreetingText),
+                           ElementName=RootPanel}"/>
+        <TextBlock
+            x:Name="MainViewGreetingText"
+            Grid.Row="1"
+            FontSize="24"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding Path=(views:AttachedProps.GreetingText),
+                           ElementName=TheMainView}"/>
+        <Button x:Name="ChangeGreetingTextOnMainViewButton"
+                Grid.Row="3"
+                Margin="0,10"
+                Content="Change GreetingText on MainView"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"/>
+    </Grid>
 </UserControl>
