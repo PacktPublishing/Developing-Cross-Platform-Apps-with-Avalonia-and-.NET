@@ -1,6 +1,7 @@
 using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 
 namespace AttachedPropSample.Views;
 
@@ -10,7 +11,6 @@ public partial class MainView : UserControl
         "Hello World";
 
     int _numberClicks = 0;
-
     IDisposable? _callbackDisposable = null;
 
     public MainView()
@@ -29,8 +29,12 @@ public partial class MainView : UserControl
             throw new System.Exception($"greetingText is incorrect");
         }
 
+        ChangeGreetingTextOnMainViewButton.Click += 
+            ChangeGreetingText;
+
+
         // registering a callback
-        _callbackDisposable = 
+        _callbackDisposable =
             AttachedProps.GreetingTextProperty
                      .Changed
                      .Subscribe(OnGreetingTextChanged!);
@@ -39,15 +43,15 @@ public partial class MainView : UserControl
         //_callbackDisposable =
         //    this.GetObservable(AttachedProps.GreetingTextProperty)
         //        .Subscribe(OnGreetingTextChangedCallback);
-
-        ChangeGreetingTextOnMainViewButton.Click += 
-            ChangeGreetingText;
     }
 
-    private void ChangeGreetingText(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void ChangeGreetingText(object? sender, RoutedEventArgs e)
     {
         _numberClicks++;
-        AttachedProps.SetGreetingText(this, $"{GREETING_TEXT_BASE}_{_numberClicks}");
+        AttachedProps.SetGreetingText
+        (
+            this, 
+            $"{GREETING_TEXT_BASE}_{_numberClicks}");
     }
 
     private void OnGreetingTextChanged

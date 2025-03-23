@@ -16,10 +16,12 @@ public static class AttachedProps
         obj.SetValue(GreetingTextProperty, value);
     }
 
-    public static readonly AttachedProperty<string?> GreetingTextProperty =
+    public static readonly AttachedProperty<string?> 
+        GreetingTextProperty =
         AvaloniaProperty.RegisterAttached<Control, Control, string?>
         (
-            "GreetingText"
+            "GreetingText",
+            "Default Text" // AP default value 
         );
     #endregion GreetingText Attached Avalonia Property
 }
