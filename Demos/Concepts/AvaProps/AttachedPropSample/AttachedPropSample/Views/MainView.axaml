@@ -5,16 +5,24 @@
              xmlns:views="using:AttachedPropSample.Views">
     <Grid x:Name="RootPanel"
           Margin="20"
-          RowDefinitions="*,Auto">
-        <TextBlock
-            x:Name="MainViewGreetingText"
-            FontSize="24"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Text="{Binding Path=(views:AttachedProps.GreetingText),
+          RowDefinitions="*, *,Auto">
+		<TextBlock
+			x:Name="RootPanelGreetingText"
+			FontSize="24"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Text="{Binding Path=(views:AttachedProps.GreetingText),
+						   ElementName=RootPanel}"/>
+		<TextBlock
+			x:Name="MainViewGreetingText"
+			FontSize="24"
+			Grid.Row="1"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Text="{Binding Path=(views:AttachedProps.GreetingText),
                            ElementName=TheMainView}"/>
         <Button x:Name="ChangeGreetingTextOnMainViewButton"
-                Grid.Row="3"
+                Grid.Row="2"
                 Margin="0,10"
                 Content="Change GreetingText on MainView"
                 HorizontalAlignment="Right"
