@@ -17,6 +17,15 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
 
+        // test that the getter returns a default value 
+        // if the Attached Property is NOT set on an object
+        string? defaultText = AttachedProps.GetGreetingText(RootPanel);
+
+        if (defaultText != "Default Text")
+        {
+            throw new Exception("Default GreetingText is not Correct");
+        }
+
         // Set Attached Property GreetingText
         AttachedProps.SetGreetingText(this, GREETING_TEXT_BASE);
 
@@ -26,7 +35,7 @@ public partial class MainView : UserControl
         // assert greeting text is correct
         if (greetingText != GREETING_TEXT_BASE)
         {
-            throw new System.Exception($"greetingText is incorrect");
+            throw new System.Exception("greetingText is incorrect");
         }
 
         ChangeGreetingTextOnMainViewButton.Click += 
