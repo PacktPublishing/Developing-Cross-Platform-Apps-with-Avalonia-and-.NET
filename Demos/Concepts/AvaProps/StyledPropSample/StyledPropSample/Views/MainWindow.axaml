@@ -1,0 +1,10 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:StyledPropSample.Views"
+        x:Class="StyledPropSample.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+		Width="400"
+		Height="150"
+        Title="StyledPropSample">
+        <views:MainView />
+</Window>
