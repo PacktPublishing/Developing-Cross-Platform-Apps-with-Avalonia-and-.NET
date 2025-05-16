@@ -1,0 +1,55 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="BasicXAML.Views.MainView"
+			 xmlns:local="using:BasicXAML.Views">
+	<StackPanel HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+		<TextBlock Background="LightBlue"
+				   Text="Hello World"
+				   HorizontalAlignment="Center"
+				   FontSize="18"
+				   Padding="10,5"
+				   Margin="0,15"/>
+		<TextBlock HorizontalAlignment="Center"
+				   FontSize="18"
+				   Padding="10,5"
+				   Margin="0,15">
+			<TextBlock.Background>
+				<LinearGradientBrush StartPoint="0%, 0%"
+									 EndPoint="100%, 0%">
+					<GradientStop Offset="0"
+								  Color="LightBlue"/>
+					<GradientStop Offset="0.5"
+								  Color="LightGreen"/>
+					<GradientStop Offset="1"
+								  Color="Yellow"/>
+				</LinearGradientBrush>
+			</TextBlock.Background>
+			<TextBlock.Text>
+				Hello
+				World
+			</TextBlock.Text>
+		</TextBlock>
+
+		<TextBlock HorizontalAlignment="Center"
+			       Background="LightBlue"
+				   local:AttachedProps.GreetingText="Hello World Attached"
+				   Text="{Binding $self.(local:AttachedProps.GreetingText)}"
+				   FontSize="18"
+				   Padding="10,5"
+				   Margin="0,15"/>
+
+		<TextBlock HorizontalAlignment="Center"
+				   Background="LightBlue"
+				   Text="{Binding $self.(local:AttachedProps.GreetingText)}"
+				   FontSize="18"
+				   Padding="10,5"
+				   Margin="0,15">
+			<local:AttachedProps.GreetingText>
+				Hello 
+				World
+				Attached
+			</local:AttachedProps.GreetingText>
+		</TextBlock>
+	</StackPanel>
+</UserControl>
