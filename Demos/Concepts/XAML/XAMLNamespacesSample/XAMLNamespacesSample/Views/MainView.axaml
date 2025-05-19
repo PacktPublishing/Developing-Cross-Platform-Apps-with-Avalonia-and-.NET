@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="XAMLNamespacesSample.Views.MainView"
+			 xmlns:myControls1="clr-namespace:myControls;assembly=MyControls"
+			 xmlns:myControls2="https://avaloniabook.com/samples">
+	<Grid ColumnDefinitions="*,*">
+		<myControls1:MyUserControl/>
+
+		<myControls2:MyUserControl Grid.Column="1"/>
+	</Grid>
+</UserControl>
