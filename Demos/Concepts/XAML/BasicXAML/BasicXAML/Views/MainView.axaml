@@ -13,7 +13,8 @@
 		<TextBlock HorizontalAlignment="Center"
 				   FontSize="18"
 				   Padding="10,5"
-				   Margin="0,15">
+				   Margin="0,15"
+				   >
 			<TextBlock.Background>
 				<LinearGradientBrush StartPoint="0%, 0%"
 									 EndPoint="100%, 0%">
