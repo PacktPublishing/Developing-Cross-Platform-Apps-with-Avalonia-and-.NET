@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace myControls;
+namespace MyComplexControls;
 
 public partial class MyUserControl : UserControl
 {

@@ -1,23 +1,24 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 x:Class="myControls.MyUserControl"
-			 xmlns:myControls1="using:myControls"
-			 xmlns:myControls2="clr-namespace:myControls"
-			 xmlns:myControls3="clr-namespace:myControls;assembly=MyControls"
-			 xmlns:myControls4="https://avaloniabook.com/samples">
-	<StackPanel HorizontalAlignment="Center"
-				VerticalAlignment="Center">
-		<myControls1:MyTextBlock Text="Hello World!"
-							FontSize="20"
-							Margin="0,10"/>
-		<myControls2:MyTextBlock Text="Hello World!"
-								 FontSize="20"
-								 Margin="0,10"/>
-		<myControls3:MyTextBlock Text="Hello World!"
-								 FontSize="20"
-								 Margin="0,10"/>
-		<myControls4:MyTextBlock Text="Hello World!"
-								 FontSize="20"
-								 Margin="0,10"/>
+<UserControl 
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="MyComplexControls.MyUserControl"
+    xmlns:myControls1="using:MyControls"
+    xmlns:myControls2="clr-namespace:MyControls"
+    xmlns:myControls3="clr-namespace:MyControls;assembly=MyControls"
+    xmlns:myControls4="https://avaloniabook.com/samples">
+    <StackPanel HorizontalAlignment="Center"
+    			VerticalAlignment="Center">
+    	<myControls1:MyTextBlock Text="Hello World!"
+    						FontSize="20"
+    						Margin="0,10"/>
+    	<myControls2:MyTextBlock Text="Hello World!"
+    							 FontSize="20"
+    							 Margin="0,10"/>
+    	<myControls3:MyTextBlock Text="Hello World!"
+    							 FontSize="20"
+    							 Margin="0,10"/>
+    	<myControls4:MyTextBlock Text="Hello World!"
+    							 FontSize="20"
+    							 Margin="0,10"/>
 	</StackPanel>
 </UserControl>

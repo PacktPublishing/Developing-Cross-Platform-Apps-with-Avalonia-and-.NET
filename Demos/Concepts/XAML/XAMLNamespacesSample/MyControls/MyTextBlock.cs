@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 
-namespace myControls;
+namespace MyControls;
 
 public class MyTextBlock : TextBlock
 {

@@ -17,5 +17,8 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("08da9ccc-4f5a-4605-9baf-9af90ee38e83")]
 
-[assembly: XmlnsDefinition("https://avaloniabook.com/samples", "myControls")]
+[assembly: XmlnsDefinition("https://avaloniabook.com/samples", 
+                           "MyControls")]
+[assembly: XmlnsDefinition("https://avaloniabook.com/samples", 
+                           "MyComplexControls")]
 

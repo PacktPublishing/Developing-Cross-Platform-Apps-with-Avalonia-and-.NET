@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:XAMLNamespacesSample.Views"
         x:Class="XAMLNamespacesSample.Views.MainWindow"
-		Width="300"
+		Width="450"
 		Height="200"
         Icon="/Assets/avalonia-logo.ico"
         Title="XAMLNamespacesSample">
