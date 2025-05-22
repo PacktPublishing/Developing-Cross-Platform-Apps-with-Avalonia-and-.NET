@@ -1,20 +1,19 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 x:Class="SimpleStaticResourceSample.Views.MainView"
-			 xmlns:local="using:SimpleStaticResourceSample.Views">
+			 x:Class="SimpleStaticResourceSample.Views.MainView">
 	<UserControl.Resources>
-		<x:String x:Key="Greeting">Hello World!</x:String>
+		<x:String x:Key="GreetText">Greetings from Avalonia!</x:String>
 	</UserControl.Resources>
 	<StackPanel HorizontalAlignment="Center"
 				VerticalAlignment="Center">
 		<TextBlock FontSize="20"
 				   Margin="0,10">
 			<TextBlock.Text>
-				<StaticResource ResourceKey="Greeting"/>
+				<StaticResource ResourceKey="GreetText"/>
 			</TextBlock.Text>
 		</TextBlock>
 
-		<TextBlock Text="{StaticResource Greeting}"
+		<TextBlock Text="{StaticResource GreetText}"
 				   FontSize="20"
 				   Margin="0,10"/>
 	</StackPanel>
