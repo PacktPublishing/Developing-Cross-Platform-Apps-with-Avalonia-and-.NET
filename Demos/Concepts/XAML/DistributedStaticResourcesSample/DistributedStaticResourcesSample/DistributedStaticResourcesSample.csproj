@@ -21,6 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Library\SharedLib.csproj" />
+    <ProjectReference Include="..\Lib\Lib.csproj" />
   </ItemGroup>
 </Project>

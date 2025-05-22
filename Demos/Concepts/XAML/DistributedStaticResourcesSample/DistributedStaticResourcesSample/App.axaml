@@ -3,6 +3,9 @@
              xmlns:local="using:DistributedStaticResourcesSample"
              x:Class="DistributedStaticResourcesSample.App"
              RequestedThemeVariant="Default">
+	<Application.Resources>
+		<x:String x:Key="AppResource">App ResourceDict Entry</x:String>
+	</Application.Resources>
     <Application.Styles>
         <SimpleTheme />
     </Application.Styles>

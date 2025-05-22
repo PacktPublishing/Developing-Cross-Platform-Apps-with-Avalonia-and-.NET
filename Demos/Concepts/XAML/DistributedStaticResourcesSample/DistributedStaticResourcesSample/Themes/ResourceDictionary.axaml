@@ -1,6 +1,8 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<x:String x:Key="GreetText">Local ResourceDict Greeting</x:String>
+	<x:String 
+		x:Key="GreetText">Local ResourceDict Greeting</x:String>
 
-	<x:String x:Key="AnotherText">Local ResourceDict Entry</x:String>
+	<x:String 
+		x:Key="AnotherText">Local ResourceDict Entry</x:String>
 </ResourceDictionary>

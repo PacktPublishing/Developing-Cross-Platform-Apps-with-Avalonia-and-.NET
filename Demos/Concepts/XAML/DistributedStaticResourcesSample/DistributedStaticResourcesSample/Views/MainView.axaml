@@ -5,10 +5,11 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceInclude Source="/Themes/ResourceDictionary.axaml"/>
-				<ResourceInclude Source="avares://SharedLib/Themes/ResourceDictionary.axaml"/>
+				<ResourceInclude Source="avares://Lib/Themes/ResourceDictionary.axaml"/>
 			</ResourceDictionary.MergedDictionaries>
 			
-			<x:String x:Key="GreetText">Greetings from Avalonia!</x:String>
+			<x:String x:Key="GreetText">Greetings!</x:String>
+			
 		</ResourceDictionary>
 	</UserControl.Resources>
 	<StackPanel HorizontalAlignment="Center"
@@ -23,6 +24,10 @@
 				   Margin="0,10"/>
 
 		<TextBlock Text="{StaticResource YetAnotherText}"
+				   FontSize="20"
+				   Margin="0,10"/>
+
+		<TextBlock Text="{StaticResource AppResource}"
 				   FontSize="20"
 				   Margin="0,10"/>
 	</StackPanel>

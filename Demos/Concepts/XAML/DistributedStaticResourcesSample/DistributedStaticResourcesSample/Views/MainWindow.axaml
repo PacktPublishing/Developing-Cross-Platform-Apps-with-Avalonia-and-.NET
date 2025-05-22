@@ -3,7 +3,7 @@
         xmlns:views="clr-namespace:DistributedStaticResourcesSample.Views"
         x:Class="DistributedStaticResourcesSample.Views.MainWindow"
 		Width="300"
-		Height="300"
+		Height="200"
         Icon="/Assets/avalonia-logo.ico"
         Title="DistributedStaticResourcesSample">
         <views:MainView />
