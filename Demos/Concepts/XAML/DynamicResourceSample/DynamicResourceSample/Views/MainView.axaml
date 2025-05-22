@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="DynamicResourceSample.Views.MainView">
+	<UserControl.Resources>
+		<x:String x:Key="Greeting">Greetings!</x:String>
+	</UserControl.Resources>
+	<Grid Margin="20">
+		<TextBlock Text="{DynamicResource Greeting}" 
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center"
+				   FontSize="20"/>
+
+		<Button x:Name="ChangeResourceButton"
+				Content="Change Resource"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Bottom"/>
+	</Grid>
+</UserControl>
