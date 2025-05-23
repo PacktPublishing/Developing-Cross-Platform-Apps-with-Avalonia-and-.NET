@@ -9,8 +9,7 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
 
-        ChangeResourceButton.Click +=
-            ToggleGreeting;
+        ChangeResourceButton.Click += ToggleGreeting;
     }
 
     private void ToggleGreeting
