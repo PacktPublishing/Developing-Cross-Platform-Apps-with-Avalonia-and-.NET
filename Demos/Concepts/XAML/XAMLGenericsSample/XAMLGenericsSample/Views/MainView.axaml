@@ -1,0 +1,93 @@
+<UserControl
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="XAMLGenericsSample.Views.MainView"
+	xmlns:colls=
+	   "clr-namespace:System.Collections.Generic;assembly=System.Collections"
+	xmlns:local="using:XAMLGenericsSample.Views">
+	<UserControl.Resources>
+		<local:MyTuple x:Key="TheTuple"
+					   x:TypeArguments="x:Int32, x:String"
+					   Item1="123"
+					   Item2="Hello World!"/>
+		<colls:List x:Key="ListOfInts" 
+					x:TypeArguments="x:Int32">
+			<x:Int32>5</x:Int32>
+			<x:Int32>4</x:Int32>
+		</colls:List>
+
+		<colls:List x:Key="ListOfTuples"
+					x:TypeArguments="local:MyTuple(x:Int32, x:String)">
+			<local:MyTuple x:TypeArguments="x:Int32, x:String"
+						   Item1="1"
+						   Item2="Hello World!_1"/>
+			<local:MyTuple x:TypeArguments="x:Int32, x:String"
+						   Item1="2"
+						   Item2="Hello World!_2"/>
+		</colls:List>
+		<colls:Dictionary x:Key="DictOfIntsToStrs" 
+						  x:TypeArguments="x:Int32, x:String">
+			<x:String x:Key="1">Hello_1</x:String>
+			<x:String x:Key="2">Hello_2</x:String>
+		</colls:Dictionary>
+
+		<colls:Dictionary x:Key="DictOfIntsToTuples"
+						  x:TypeArguments="x:Int32, local:MyTuple(x:Int32, x:String)">
+			<local:MyTuple x:Key="1" 
+						   x:TypeArguments="x:Int32, x:String"
+						   Item1="1"
+						   Item2="Hello World!_1"/>
+			<local:MyTuple x:Key="2" 
+						   x:TypeArguments="x:Int32, x:String"
+						   Item1="2"
+						   Item2="Hello World!_2"/>
+		</colls:Dictionary>
+	</UserControl.Resources>
+	<StackPanel HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Margin="20">
+		<Label Content="{StaticResource TheTuple}"
+			   FontWeight="Bold"
+			   FontSize="18"
+			   Margin="0,0,0,20"/>
+		<Grid RowDefinitions="Auto, *"
+			  Margin="0,20,0,0">
+			<TextBlock Text="List&lt;int&gt;:"
+					   FontSize="18"/>
+			<ItemsControl ItemsSource="{StaticResource ListOfInts}"
+						  Grid.Row="1"
+						  FontSize="18"
+						  Margin="50,0,0,0"/>
+		</Grid>
+		<Grid RowDefinitions="Auto, *"
+			  Margin="0,20,0,0">
+			<TextBlock Text="List&lt;MyTuple&gt;:"
+					   FontWeight="Bold"
+					   FontSize="18"/>
+			<ItemsControl ItemsSource="{StaticResource ListOfTuples}"
+						  Grid.Row="1"
+						  FontSize="18"
+						  Margin="50,0,0,0"/>
+		</Grid>
+		<Grid RowDefinitions="Auto, *"
+			  Margin="0,30,0,0">
+			<TextBlock Text="Dict&lt;int, string&gt;:"
+					   FontWeight="Bold"
+					   FontSize="18"/>
+			<ItemsControl ItemsSource="{StaticResource DictOfIntsToStrs}"
+						  Grid.Row="1"
+						  FontSize="18"
+						  Margin="50,0,0,0"/>
+		</Grid>
+		<Grid RowDefinitions="Auto, *"
+			  Margin="0,20,0,0">
+			<TextBlock Text="Dict&lt;int, local:MyTuple&lt;x:Int32, x:String&gt;&gt;:"
+					   FontWeight="Bold"
+					   FontSize="18"/>
+			<ItemsControl ItemsSource="{StaticResource DictOfIntsToTuples}"
+						  Grid.Row="1"
+						  FontSize="18"
+						  Margin="50,0,0,0"/>
+		</Grid>
+	</StackPanel>
+</UserControl>
