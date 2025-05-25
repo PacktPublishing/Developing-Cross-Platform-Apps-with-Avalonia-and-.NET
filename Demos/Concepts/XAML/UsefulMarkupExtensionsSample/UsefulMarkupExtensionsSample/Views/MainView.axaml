@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="UsefulMarkupExtensionsSample.Views.MainView"
+			 xmlns:local="using:UsefulMarkupExtensionsSample.Views">
+	<UserControl.Resources>
+		<local:StrContainer
+			x:Key="TheStrContainer"
+			Str="{x:Static local:GreetingContainer.Greeting}"/>
+	</UserControl.Resources>
+	<StackPanel HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+		<TextBlock Text="{x:Static local:GreetingContainer.Greeting}"
+				   FontSize="20"
+				   Margin="0,10"/>
+		<Label Content="{StaticResource TheStrContainer}"
+			   Padding="0"
+			   FontSize="20"
+			   Margin="0,10"/>
+		<Label Content="{x:Type local:GreetingContainer}"
+			   Padding="0"
+			   FontSize="20"
+			   Margin="0,10"/>
+		<CheckBox IsChecked="{x:True}" 
+				  Content="{x:True}" 
+				  FontSize="20"
+				  Margin="0,10"/>
+		<CheckBox IsChecked="{x:False}"
+				  Content="{x:False}"
+				  FontSize="20"
+				  Margin="0,10"/>
+		<CheckBox IsChecked="{x:Null}"
+				  Content="Null"
+				  FontSize="20"
+				  Margin="0,10"/>
+
+	</StackPanel>
+</UserControl>
