@@ -10,6 +10,10 @@ public class MyTuple<T1, T2>
 
     public override string ToString()
     {
-        return $"MyTuple({typeof(T1).Name}, {typeof(T2).Name}): ({Item1}, {Item2})";
+        string t1Name = typeof(T1).Name;
+        string t2Name = typeof(T2).Name;
+
+        return 
+            $"MyTuple<{t1Name}, {t2Name}>({Item1}, {Item2})";
     }
 }

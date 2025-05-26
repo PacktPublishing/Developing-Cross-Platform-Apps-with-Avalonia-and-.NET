@@ -47,12 +47,12 @@
 				VerticalAlignment="Center"
 				Margin="20">
 		<Label Content="{StaticResource TheTuple}"
-			   FontWeight="Bold"
 			   FontSize="18"
 			   Margin="0,0,0,20"/>
 		<Grid RowDefinitions="Auto, *"
 			  Margin="0,20,0,0">
 			<TextBlock Text="List&lt;int&gt;:"
+					   FontWeight="Bold"
 					   FontSize="18"/>
 			<ItemsControl ItemsSource="{StaticResource ListOfInts}"
 						  Grid.Row="1"
